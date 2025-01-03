@@ -1,0 +1,33 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body class="edit">
+    <svg id="controls"></svg>
+    <svg id="canvas" xmlns="http://www.w3.org/2000/svg">
+        <style>
+            use.odd {
+                fill: white;
+            }
+
+            use.even {
+                fill: navy;
+            }
+        </style>
+        <defs id="canvas-defs"></defs>
+    </svg>
+    <svg id="palette"></svg>
+    <span id="pieces"></span>
+    <div id="buttons">
+        <span class="material-symbols-outlined clear" title="Clear">delete</span>
+        <span class="material-symbols-outlined undo disabled" title="Undo: Ctrl+Z">undo</span>
+        <span class="material-symbols-outlined redo disabled" title="Redo: Ctrl+Y or Ctrl+Shift+Z">redo</span>
+        <span class="material-symbols-outlined edit" title="Toggle edit controls">edit</span>
+        <span class="material-symbols-outlined new_tab" title="Open in new tab">open_in_new</span>
+        <span class="material-symbols-outlined download" title="Download: Ctrl+S">download</span>
+        <input class="propagate" type="number" min="0" max="20" value="5" title="Max number of automatic steps" />
+    </div>
+    <script src="draw.js" type="module"></script>
+</body>
+</html>

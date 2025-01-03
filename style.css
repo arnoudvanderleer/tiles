@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    background-color: gray;
+}
+
+body.edit {
+    background-color: black;
+}
+
+#pieces {
+    display: none;
+}
+
+#controls, #canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#palette {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#buttons {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+}
+
+#controls, #canvas {
+    width: 100vw;
+    height: 100vh;
+}
+
+#palette, #buttons {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+body:not(.edit) #palette, body:not(.edit) #controls {
+    display: none;
+}
+
+#palette use {
+    cursor: pointer;
+    fill: white;
+}
+
+#palette use.disabled {
+    fill: #444;
+}
+
+#palette use:hover {
+    fill: lightgray;
+}
+
+#controls .edge {
+    fill: rgba(127, 127, 127, .7);
+}
+
+#controls .edge.impossible {
+    fill: rgba(255, 0, 0, 1);
+}
+
+#controls .candidate {
+    fill: gray;
+}
+
+#buttons > * {
+    vertical-align: middle;
+}
+
+#buttons > span {
+    cursor: pointer;
+    color: white;
+}
+
+#buttons > .disabled {
+    color: gray;
+    cursor: default;
+}
